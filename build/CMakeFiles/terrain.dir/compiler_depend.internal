@@ -73,8 +73,11 @@ CMakeFiles/terrain.dir/glad.c.o
 
 CMakeFiles/terrain.dir/main.cpp.o
  /home/carson-laptop/Programming/3d-rendering/terrain/main.cpp
+ /home/carson-laptop/Programming/3d-rendering/terrain/include/Camera.h
+ /home/carson-laptop/Programming/3d-rendering/terrain/include/HeightGen.h
  /home/carson-laptop/Programming/3d-rendering/terrain/include/KHR/khrplatform.h
  /home/carson-laptop/Programming/3d-rendering/terrain/include/glad/glad.h
+ /home/carson-laptop/Programming/3d-rendering/terrain/include/stb_perlin.h
  /usr/include/GLFW/glfw3.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
@@ -173,6 +176,7 @@ CMakeFiles/terrain.dir/main.cpp.o
  /usr/include/c++/13/iostream
  /usr/include/c++/13/istream
  /usr/include/c++/13/limits
+ /usr/include/c++/13/math.h
  /usr/include/c++/13/new
  /usr/include/c++/13/ostream
  /usr/include/c++/13/pstl/pstl_config.h

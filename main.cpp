@@ -9,6 +9,11 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <vector>
 
+
+#define STB_PERLIN_IMPLEMENTATION
+#include "include/HeightGen.h"
+#include "include/Camera.h"
+
 void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     glViewport(0, 0, width, height);
 }
@@ -25,7 +30,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow* window = glfwCreateWindow(800, 600, "Terrain Generation |", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(800, 600, "Terrain Generation | FPS: 0", nullptr, nullptr);
     if (!window) {
         std::cerr << "Failed to create GLFW window\n";
         glfwTerminate();
@@ -45,12 +50,18 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     std::cout << "OpenGL Version: " << glGetString(GL_VERSION) << "\n";
     
     glEnable(GL_DEPTH_TEST);
+
+    glfwSwapInterval(0);
     
 
     float lastFpsTime = 0.0f;
     int frameCount = 0;
     float lastTime = 0.0f;
     while (!glfwWindowShouldClose(window)) {
+      
+      glClearColor(0.14f, 0.5f, 0.7f, 1.0f);
+      glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
       float currentTime = glfwGetTime();  // seconds
       float dt = currentTime - lastTime;
       lastTime = currentTime;
@@ -66,12 +77,10 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
         lastFpsTime = currentTime;
       }
 
+      glfwSwapBuffers(window);
 
       glfwPollEvents();
 
-      glClearColor(0.1f, 0.2f, 0.3f, 1.0f);
-      glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-      glfwSwapBuffers(window);
     }
 
     glfwDestroyWindow(window);

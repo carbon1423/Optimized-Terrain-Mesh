@@ -71,8 +71,11 @@ CMakeFiles/terrain.dir/glad.c.o: /home/carson-laptop/Programming/3d-rendering/te
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
 
 CMakeFiles/terrain.dir/main.cpp.o: /home/carson-laptop/Programming/3d-rendering/terrain/main.cpp \
+  /home/carson-laptop/Programming/3d-rendering/terrain/include/Camera.h \
+  /home/carson-laptop/Programming/3d-rendering/terrain/include/HeightGen.h \
   /home/carson-laptop/Programming/3d-rendering/terrain/include/KHR/khrplatform.h \
   /home/carson-laptop/Programming/3d-rendering/terrain/include/glad/glad.h \
+  /home/carson-laptop/Programming/3d-rendering/terrain/include/stb_perlin.h \
   /usr/include/GLFW/glfw3.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
@@ -171,6 +174,7 @@ CMakeFiles/terrain.dir/main.cpp.o: /home/carson-laptop/Programming/3d-rendering/
   /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
   /usr/include/c++/13/limits \
+  /usr/include/c++/13/math.h \
   /usr/include/c++/13/new \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/pstl_config.h \
@@ -711,9 +715,9 @@ CMakeFiles/terrain.dir/main.cpp.o: /home/carson-laptop/Programming/3d-rendering/
 
 /usr/include/glm/ext/matrix_double4x3_precision.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
+/usr/include/glm/ext/matrix_double4x2_precision.hpp:
 
-/usr/include/asm-generic/errno.h:
+/usr/include/glm/ext/matrix_double3x4_precision.hpp:
 
 /usr/include/c++/13/bits/stl_algobase.h:
 
@@ -773,18 +777,6 @@ CMakeFiles/terrain.dir/main.cpp.o: /home/carson-laptop/Programming/3d-rendering/
 
 /usr/include/c++/13/bits/localefwd.h:
 
-/usr/include/x86_64-linux-gnu/bits/errno.h:
-
-/usr/include/c++/13/bits/stl_pair.h:
-
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
-/usr/include/c++/13/cstdio:
-
-/usr/include/c++/13/fstream:
-
 /usr/include/c++/13/bits/exception.h:
 
 /usr/include/glm/gtc/constants.inl:
@@ -827,6 +819,18 @@ CMakeFiles/terrain.dir/main.cpp.o: /home/carson-laptop/Programming/3d-rendering/
 
 /usr/include/glm/ext/matrix_double3x3_precision.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+
+/usr/include/c++/13/bits/stl_pair.h:
+
+/usr/include/c++/13/cstdio:
+
+/usr/include/c++/13/fstream:
+
 /usr/include/glm/ext/quaternion_geometric.hpp:
 
 /usr/include/glm/ext/matrix_float3x4.hpp:
@@ -843,6 +847,10 @@ CMakeFiles/terrain.dir/main.cpp.o: /home/carson-laptop/Programming/3d-rendering/
 
 /usr/include/assert.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
+
+/usr/include/asm-generic/errno.h:
+
 /usr/include/c++/13/bits/hash_bytes.h:
 
 /usr/include/c++/13/bits/stl_iterator_base_funcs.h:
@@ -852,6 +860,12 @@ CMakeFiles/terrain.dir/main.cpp.o: /home/carson-laptop/Programming/3d-rendering/
 /home/carson-laptop/Programming/3d-rendering/terrain/main.cpp:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
+
+/home/carson-laptop/Programming/3d-rendering/terrain/include/stb_perlin.h:
+
+/usr/include/c++/13/math.h:
+
+/usr/include/glm/detail/type_quat.hpp:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
@@ -945,6 +959,8 @@ CMakeFiles/terrain.dir/main.cpp.o: /home/carson-laptop/Programming/3d-rendering/
 
 /usr/include/glm/detail/_fixes.hpp:
 
+/home/carson-laptop/Programming/3d-rendering/terrain/include/Camera.h:
+
 /usr/include/x86_64-linux-gnu/bits/stdint-least.h:
 
 /usr/include/c++/13/cerrno:
@@ -997,6 +1013,8 @@ CMakeFiles/terrain.dir/main.cpp.o: /home/carson-laptop/Programming/3d-rendering/
 
 /usr/include/c++/13/bits/basic_ios.h:
 
+/home/carson-laptop/Programming/3d-rendering/terrain/include/HeightGen.h:
+
 /usr/include/glm/detail/type_vec3.hpp:
 
 /usr/include/glm/ext/vector_bool4.hpp:
@@ -1014,6 +1032,12 @@ CMakeFiles/terrain.dir/main.cpp.o: /home/carson-laptop/Programming/3d-rendering/
 /usr/include/endian.h:
 
 /usr/include/stdint.h:
+
+/usr/include/glm/gtc/type_ptr.inl:
+
+/usr/include/glm/ext/matrix_double4x2.hpp:
+
+/usr/include/c++/13/bits/ostream.tcc:
 
 /usr/include/glm/ext/matrix_double2x3.hpp:
 
@@ -1036,10 +1060,6 @@ CMakeFiles/terrain.dir/main.cpp.o: /home/carson-laptop/Programming/3d-rendering/
 /usr/include/c++/13/ext/numeric_traits.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/usr/include/c++/13/bits/stl_iterator_base_types.h:
-
-/usr/include/stdio.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
@@ -1096,6 +1116,10 @@ CMakeFiles/terrain.dir/main.cpp.o: /home/carson-laptop/Programming/3d-rendering/
 /usr/lib/gcc/x86_64-linux-gnu/13/include/limits.h:
 
 /usr/include/c++/13/tr1/modified_bessel_func.tcc:
+
+/usr/include/stdio.h:
+
+/usr/include/c++/13/bits/stl_iterator_base_types.h:
 
 /usr/include/c++/13/bits/new_allocator.h:
 
@@ -1172,8 +1196,6 @@ CMakeFiles/terrain.dir/main.cpp.o: /home/carson-laptop/Programming/3d-rendering/
 /usr/include/linux/errno.h:
 
 /usr/include/c++/13/debug/debug.h:
-
-/usr/include/glm/ext/matrix_double4x2_precision.hpp:
 
 /usr/include/c++/13/ext/alloc_traits.h:
 
@@ -1321,8 +1343,6 @@ CMakeFiles/terrain.dir/main.cpp.o: /home/carson-laptop/Programming/3d-rendering/
 
 /usr/include/glm/detail/type_mat4x4.inl:
 
-/usr/include/glm/detail/type_quat.hpp:
-
 /usr/include/c++/13/bits/uses_allocator_args.h:
 
 /usr/include/glm/detail/type_vec1.hpp:
@@ -1356,11 +1376,3 @@ CMakeFiles/terrain.dir/main.cpp.o: /home/carson-laptop/Programming/3d-rendering/
 /usr/include/glm/ext/matrix_double3x2.hpp:
 
 /usr/include/glm/ext/matrix_double3x4.hpp:
-
-/usr/include/glm/ext/matrix_double3x4_precision.hpp:
-
-/usr/include/glm/gtc/type_ptr.inl:
-
-/usr/include/c++/13/bits/ostream.tcc:
-
-/usr/include/glm/ext/matrix_double4x2.hpp:

@@ -9,8 +9,11 @@
 ## Current Progress:
 
 - Load GLFW and OpenGL
+- HeightGen Class created
+- Implementing mesh class
 
 ## Next Steps:
 
 - Create chunk and mesh classes
 - create multiple flat chunks (eventually adding perlin noise)
+- generate chunk 0,0

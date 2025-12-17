@@ -358,4 +358,8 @@ CMakeFiles/terrain.dir/main.cpp.o: \
  /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
- /usr/include/c++/13/bits/vector.tcc
+ /usr/include/c++/13/bits/vector.tcc \
+ /home/carson-laptop/Programming/3d-rendering/terrain/include/HeightGen.h \
+ /home/carson-laptop/Programming/3d-rendering/terrain/include/stb_perlin.h \
+ /usr/include/c++/13/math.h \
+ /home/carson-laptop/Programming/3d-rendering/terrain/include/Camera.h
