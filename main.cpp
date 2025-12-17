@@ -25,7 +25,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-    GLFWwindow* window = glfwCreateWindow(800, 600, "OpenGL Window", nullptr, nullptr);
+    GLFWwindow* window = glfwCreateWindow(800, 600, "Terrain Generation |", nullptr, nullptr);
     if (!window) {
         std::cerr << "Failed to create GLFW window\n";
         glfwTerminate();
@@ -45,8 +45,28 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
     std::cout << "OpenGL Version: " << glGetString(GL_VERSION) << "\n";
     
     glEnable(GL_DEPTH_TEST);
+    
 
+    float lastFpsTime = 0.0f;
+    int frameCount = 0;
+    float lastTime = 0.0f;
     while (!glfwWindowShouldClose(window)) {
+      float currentTime = glfwGetTime();  // seconds
+      float dt = currentTime - lastTime;
+      lastTime = currentTime;
+  
+      frameCount++;
+
+      if (currentTime - lastFpsTime >= 1.0f) {
+        std::string title = "Terrain Generation | FPS: " + std::to_string(frameCount);
+        glfwSetWindowTitle(window, title.c_str());
+
+        // Reset for the next second
+        frameCount = 0;
+        lastFpsTime = currentTime;
+      }
+
+
       glfwPollEvents();
 
       glClearColor(0.1f, 0.2f, 0.3f, 1.0f);
