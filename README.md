@@ -10,10 +10,13 @@
 
 - Load GLFW and OpenGL
 - HeightGen Class created
-- Implementing mesh class
+- Mesh class
+- Frag and Vertex shaders
+- Draws one triangle
 
 ## Next Steps:
 
 - Create chunk and mesh classes
-- create multiple flat chunks (eventually adding perlin noise)
-- generate chunk 0,0
+- Create multiple flat chunks (eventually adding perlin noise)
+- Generate chunk 0,0
+- Add camera movement
